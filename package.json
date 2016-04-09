@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "babel ./src/js/react-native-bootstrap-slider.jsx -o ./dist/react-native-bootstrap-slider.js",
+    "build": "babel ./src/js/react-html5-slider.jsx -o ./dist/react-html5-slider.js",
     "buildDemo": "webpack",
     "prepublish": "npm run build"
   },

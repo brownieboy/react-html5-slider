@@ -3,7 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import es6BindAll from "es6bindall";
-import ReactNativeSlider from "./react-native-slider.jsx";
+import ReactNativeSlider from "./react-html5-slider.jsx";
 
 class Demo extends React.Component {
     constructor(props) {
