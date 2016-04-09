@@ -3,14 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import es6BindAll from "es6bindall";
-import ReactNativeBootstrapSlider from "./react-native-bootstrap-slider.jsx";
-
-// CommonJS expamples below if not using ES6.
-// var reactNativeBootstrapSliderObj = require("./react-native-bootstrap-slider.jsx");
-// var ReactNativeSlider = reactNativeBootstrapSliderObj.ReactNativeSlider;
-// var ReactBootstrapSlider  = reactNativeBootstrapSliderObj.ReactBootstrapSlider;
-// var ReactNativeBootstrapSlider = reactNativeBootstrapSliderObj.ReactNativeBootstrapSlider;
-
+import ReactNativeSlider from "./react-native-slider.jsx";
 
 class Demo extends React.Component {
     constructor(props) {
@@ -38,7 +31,7 @@ class Demo extends React.Component {
         var newValue = this.state.currentValue;
         return (
             <div>
-               <ReactNativeBootstrapSlider
+               <ReactNativeSlider
                     value = { this.state.currentValue }
                     handleChange = { this.changeValue }
                     step = { this.state.step }
@@ -54,7 +47,8 @@ class Demo extends React.Component {
 
 }
 
-ReactDOM.render(<Demo polyfill = { false }
+ReactDOM.render(<Demo
+        polyfill = { false }
         startValue = { 3000 }
         max = { 20000 }
         min = { 1000 }

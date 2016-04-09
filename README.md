@@ -1,7 +1,7 @@
-# React Bootstrap Native Slider
+# React Native Slider
 
 ###Overview
-A ReactJS wrapper for the HTML5 input type="range" slider component, but using [seiyria's Bootstrap Slider component](https://github.com/seiyria/bootstrap-slider) as a polyfill where the HTML5 version is not available (IE 9) or otherwise suffers from a problematic implementation (any other version of IE).
+A ReactJS wrapper for the HTML5 input type="range" slider component.
 
 
 ###Background
@@ -26,19 +26,10 @@ Here's how the native JavaScript control is rendered in my plug-in:
 It's about as simple a rendering as you could want in React.  You'd pass some props into your component, and render them as the corresponding attributes on the input field.
 
 
-####Internet Explorer Problems
-The HTML5 slider control has problems on internet explorer:
-1.  It isn't supported on IE9
-1.  It's poorly implemented visually on IE10 and above.  The part that you have to grap with your mouse, or finger on tablet, to actually slide the values is way too small, IMHO. (Check the **oninput in IE11** video on [this Impressive Webs article](http://www.impressivewebs.com/onchange-vs-oninput-for-range-sliders/) to see what I mean).
-
-In the end, I made an executive decision in my React Bootstrap Slider component: I don't display the native HTML5 slider control on IE.
-
-
-
 ###How to use
 Install from npm with:
 
-    npm install --save react-bootstrap-native-slider
+    npm install --save react-native-slider
 
 Require or import like so for ES6:
 
