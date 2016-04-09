@@ -1,6 +1,6 @@
 {
   "name": "react-html5-slider",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Native HTML5 Slider for React",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "buildDemo": "npm run build && webpack",
     "prepublish": "npm run build"
   },
-  "main": "dist/react-native-html5-slider.js",
+  "main": "dist/react-html5-slider.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/brownieboy/react-html5-slider.git"
