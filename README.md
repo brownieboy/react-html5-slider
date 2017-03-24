@@ -1,10 +1,10 @@
 # React HTML5 Slider
 
-###Overview
+### Overview
 A ReactJS wrapper for the HTML5 input type="range" slider component.
 
 
-###Background
+### Background
 Note: This project is a split off from my [react-bootstrap-native-slider](https://www.npmjs.com/package/react-bootstrap-native-slider) plugin.  The plan is for the react-html5-slider to become a dependency of react-bootstra-native-slider, rather than have all the code bundled into the latter, as at present.
 
 I like the HTML5 native range control, especially how easy it is manipulate via [ReactJS](http://facebook.github.io/react/), my current favourite JavaScript library.
@@ -28,7 +28,7 @@ Here's how the native JavaScript control is rendered in my plug-in:
 It's about as simple a rendering as you could want in React.  You'd pass some props into your component, and render them as the corresponding attributes on the input field.
 
 
-###How to use
+### How to use
 Install from npm with:
 
     npm install --save react-html5-slider
@@ -62,7 +62,7 @@ The **value**, **step**, **max** and **min** parameters should be self-explanato
 
 If the optional parameter **disabled** is included, and is set to "disabled", then the slider will display in a disabled state.  If the parameter is not included, or is set to anything else except "disabled", then the slider control will be enabled.
 
-##Development
+## Development
 To develop, issue this command:
 
     npm run start
@@ -80,15 +80,6 @@ To build the demo, issue:
    npm run buildDemo
 
 Wepback will build the JavaScript files for the demo in the /demo/js/ folder.  The demo code will go in the slider-bundle.min.js file.  Any 3rd-party code (React and the react-html5-slide plugin itself) goes into the vendor.min.js file.  Source maps are generated for both.
-
-
-
-
-
-
-
-
-
 
 
 
