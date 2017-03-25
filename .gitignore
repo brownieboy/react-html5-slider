@@ -5,3 +5,4 @@ logs
 *.project
 .DS_Store
 .idea
+reports
