@@ -10,3 +10,4 @@ gulpfile.js
 webpack.config.js
 reports
 *.lock
+package

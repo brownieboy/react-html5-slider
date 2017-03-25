@@ -1,6 +1,6 @@
 {
   "name": "react-html5-slider",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Native HTML5 Slider for React",
   "scripts": {
     "build": "babel ./src/js/react-html5-slider.jsx -o ./dist/react-html5-slider.js",
