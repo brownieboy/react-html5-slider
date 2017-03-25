@@ -85,7 +85,7 @@ Webpack will build the JavaScript files for the demo in the /demo/js/ folder.  T
 
 ## Update History
 Version 0.2.0: 25 March 2017.
-* Added option `name` parameter. (Thanks to gmannings for the PR.)
+* Added optional `name` parameter. (Thanks to gmannings for the PR.)
 * Switched ReactNativeSlider to be a functional component, since it has no state of its own.
 * Updated dependencies to latest versions and moved react & react-dom to be peer dependencies.
 * Dumped a lot of unnecessary code in the npm bundle by adding an .npmignore file.
