@@ -17,7 +17,7 @@ class Demo extends React.Component {
         es6BindAll(this, ["changeValue", "changeAxes"]);
     }
     changeValue(e) {
-        this.setState({ currentValue: e.target.value });
+        this.setState({ currentValue: parseFloat(e.target.value) });
     }
     changeAxes() {
         this.setState({
