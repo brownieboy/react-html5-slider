@@ -93,6 +93,7 @@
                     onInput: this.props.handleChange,
                     onChange: this.handleOnChange,
                     step: this.props.step,
+                    name: this.props.name,
                     className: "react-native-slider" });
             }
         }, {
