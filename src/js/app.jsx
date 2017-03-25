@@ -40,7 +40,7 @@ class Demo extends React.Component {
                     max = { this.state.max }
                     min = { this.state.min } />
                  <br /> <br />
-                Value: { newValue }
+                Value: <span id="slidervalue">{ newValue }</span>
                 <br /><br />
                 <button onClick = { this.changeAxes } > Change axes! </button>
             </div>
