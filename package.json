@@ -10,7 +10,7 @@
     "start": "webpack-dev-server --host 0.0.0.0",
     "test": "echo \"Run testDev or testBuild scripts instead\" && exit 1",
     "testDev": "node_modules/.bin/protractor --specs=./tests/e2e/slidertest1.js protractor.local.conf.js --baseUrl=http://localhost:8080/src/index.html",
-    "testBuild": "node_modules/.bin/protractor --specs=./tests/e2e/slidertest1.js protractor.local.conf.js --baseUrl=http://localhost:8082/demo/",
+    "testBuild": "npm run buildDemo && node_modules/.bin/protractor --specs=./tests/e2e/slidertest1.js protractor.local.conf.js --baseUrl=http://localhost:8082/demo/",
     "updateSelenium": "node_modules/.bin/webdriver-manager update"
   },
   "main": "dist/react-html5-slider.js",
