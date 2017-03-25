@@ -54,6 +54,7 @@ Here's an example of how you might call it in your ReactJS's render method:
     step={this.state.step}
     max={this.state.max}
     min={this.state.min}
+    name="myslider"
     disabled="disabled" />
     }
 ```
@@ -79,7 +80,14 @@ To build the demo, issue:
 
    npm run buildDemo
 
-Wepback will build the JavaScript files for the demo in the /demo/js/ folder.  The demo code will go in the slider-bundle.min.js file.  Any 3rd-party code (React and the react-html5-slide plugin itself) goes into the vendor.min.js file.  Source maps are generated for both.
+Webpack will build the JavaScript files for the demo in the /demo/js/ folder.  The demo code will go in the slider-bundle.min.js file.  Any 3rd-party code (React and the react-html5-slide plugin itself) goes into the vendor.min.js file.  Source maps are generated for both.
 
+
+## Update History
+Version 0.2.0: 25 March 2017.
+* Added option `name` parameter. (Thanks to gmannings for the PR.)
+* Switched ReactNativeSlider to be a functional component, since it has no state of its own.
+* Updated dependencies to latest versions and moved react & react-dom to be peer dependencies.
+* Dumped a lot of unnecessary code in the npm bundle by adding an .npmignore file.
 
 

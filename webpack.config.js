@@ -49,8 +49,17 @@ if (TARGET === "buildDemo") {
             }]
         },
         plugins: [
-            new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.min.js", function(module) {
-                return module.resource && module.resource.indexOf(srcDir) === -1;
+            // new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.min.js", function(module) {
+            //     return module.resource && module.resource.indexOf(srcDir) === -1;
+            // }),
+            new webpack.optimize.CommonsChunkPlugin({
+                name: "vendor",
+                filename: "vendor.min.js",
+                minChunks: (module) => {
+                    const userRequest = module.userRequest;
+                    // module.userRequest returns name of file, including path
+                    return userRequest && userRequest.match(/\.js$/) && userRequest.indexOf("node_modules") >= 0;
+                }
             }),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
@@ -78,4 +87,3 @@ if (TARGET === "start" || !TARGET) {
 }
 
 module.exports = exportModule;
-
