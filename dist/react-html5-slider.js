@@ -80,7 +80,7 @@
         function ReactNativeSlider() {
             _classCallCheck(this, ReactNativeSlider);
 
-            return _possibleConstructorReturn(this, Object.getPrototypeOf(ReactNativeSlider).apply(this, arguments));
+            return _possibleConstructorReturn(this, (ReactNativeSlider.__proto__ || Object.getPrototypeOf(ReactNativeSlider)).apply(this, arguments));
         }
 
         _createClass(ReactNativeSlider, [{
@@ -93,6 +93,7 @@
                     onInput: this.props.handleChange,
                     onChange: this.handleOnChange,
                     step: this.props.step,
+                    name: this.props.name,
                     className: "react-native-slider" });
             }
         }, {
