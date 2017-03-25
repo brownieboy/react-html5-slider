@@ -42,7 +42,9 @@ class Demo extends React.Component {
                  <br /> <br />
                 Value: <span id="slidervalue">{ newValue }</span>
                 <br /><br />
-                <button onClick = { this.changeAxes } > Change axes! </button>
+                <button
+                    id = "buthorizontalSlider"
+                    onClick = { this.changeAxes } > Change axes! </button>
             </div>
         );
     }
