@@ -5,13 +5,13 @@ var EC = protractor.ExpectedConditions;
 
 describe("Page loads", function() {
 
-   it("should display horizontal Demo value of '3000'", function() {
+   it("should display horizontal Demo value of '5000'", function() {
       // browser.get("http://localhost:8080/src/index.html");
       browser.get("index.html");
 
       browser.wait(EC.presenceOf(element(by.css("body")), 1000));
       browser.wait(EC.presenceOf(element(by.name("myslider")), 2000));
-      expect(element(by.id("valueSpanhorizontalSlider")).getText()).toEqual("3000");
+      expect(element(by.name("myslider")).getText()).toEqual("5000");
    });
 
 });
