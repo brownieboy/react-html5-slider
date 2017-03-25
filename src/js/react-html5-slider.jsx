@@ -2,23 +2,33 @@
 
 import React from "react";
 
-export class ReactNativeSlider extends React.Component {
-    render() {
-        return ( < input type = "range"
-            value = { this.props.value }
-            min = { this.props.min }
-            max = { this.props.max }
-            onInput = { this.props.handleChange }
-            onChange = { this.handleOnChange }
-            step = { this.props.step }
-            name = { this.props.name }
-            className = "react-native-slider" / >
-        );
-    }
-    handleOnChange() {
-        // Nothing to do here.  Only present to prevent reactjs warning
-        // about onChange not being present
-    }
-}
+const ReactNativeSlider = ({
+  value,
+  min,
+  max,
+  handleChange,
+  handleOnChange,
+  step,
+  name
+}) => <input type = "range"
+            value = { value }
+            min = { min }
+            max = { max }
+            onInput = { handleChange }
+            onChange = { handleOnChange }
+            step = { step }
+            name = { name }
+            className = "react-native-slider" / >;
 
 export default ReactNativeSlider;
+
+ReactNativeSlider.propTypes = {
+  value: React.PropTypes.number.isRequired,
+  min: React.PropTypes.number.isRequired,
+  max: React.PropTypes.number.isRequired,
+  handleChange: React.PropTypes.func,
+  handleOnChange: React.PropTypes.func,
+  step: React.PropTypes.number,
+  name: React.PropTypes.string
+};
+

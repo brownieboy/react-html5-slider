@@ -28,7 +28,8 @@ class Demo extends React.Component {
         });
     }
     render() {
-        var newValue = this.state.currentValue;
+        const newValue = this.state.currentValue;
+
         return (
             <div>
                <ReactNativeSlider
@@ -44,7 +45,6 @@ class Demo extends React.Component {
             </div>
         );
     }
-
 }
 
 ReactDOM.render(<Demo
