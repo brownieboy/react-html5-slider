@@ -1,29 +1,26 @@
 /* eslint-env node */
 
 
-import path from "path";
-import webpack from "webpack";
-import merge from "webpack-merge";
+const path = require("path");
+const webpack = require("webpack");
+const merge = require("webpack-merge");
 
 const TARGET = process.env.npm_lifecycle_event;
 const ROOT_PATH = path.resolve(__dirname);
 const srcDir = path.join(__dirname, "src");
 
-var exportModule;
+let exportModule;
 
 
 const common = {
     entry: {
         app: path.resolve(ROOT_PATH) + "/src/js/app.jsx"
     },
-    // resolve: {
-    //     modulesDirectories: ["node_modules", "bower_components"]
-    // },
     module: {
         loaders: [{
             test: /\.jsx?$/,
             include: [path.resolve(__dirname, "src/js")],
-            loader: "babel", // "babel-loader" is also a legal name to reference
+            loader: "babel-loader", // "babel-loader" is also a legal name to reference
             query: {
                 presets: ["react", "es2015"]
             }
@@ -45,7 +42,7 @@ if (TARGET === "buildDemo") {
             loaders: [{
                 test: /\.jsx?$/,
                 include: [path.resolve(__dirname, "demosrc/js")],
-                loader: "babel", // "babel-loader" is also a legal name to reference
+                loader: "babel-loader",
                 query: {
                     presets: ["react", "es2015"]
                 }
@@ -70,12 +67,9 @@ if (TARGET === "start" || !TARGET) {
             filename: "src/main.js"
         },
         devServer: {
-            colors: true,
             noInfo: false,
             historyApiFallback: true,
-            // hot: true,
-            inline: true,
-            progress: true
+            inline: true
         },
         plugins: [
             new webpack.HotModuleReplacementPlugin()
@@ -83,4 +77,5 @@ if (TARGET === "start" || !TARGET) {
     });
 }
 
-export default exportModule;
+module.exports = exportModule;
+
