@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "babel ./src/js/react-html5-slider.jsx -o ./dist/react-html5-slider.js",
+    "build": "babel ./src/js/react-html5-slider.jsx --minified -o ./dist/react-html5-slider.js",
     "buildDemo": "npm run build && webpack",
     "prepublish": "npm run build"
   },

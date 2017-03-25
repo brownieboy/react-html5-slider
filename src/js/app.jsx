@@ -33,6 +33,7 @@ class Demo extends React.Component {
         return (
             <div>
                <ReactNativeSlider
+                    name = { this.props.name }
                     value = { this.state.currentValue }
                     handleChange = { this.changeValue }
                     step = { this.state.step }
@@ -50,6 +51,7 @@ class Demo extends React.Component {
 ReactDOM.render(<Demo
         polyfill = { false }
         startValue = { 3000 }
+        name = "myslider"
         max = { 20000 }
         min = { 1000 }
         step = { 1000 } />, document.getElementById("main"));
